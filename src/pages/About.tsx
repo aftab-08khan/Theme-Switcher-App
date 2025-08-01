@@ -2,7 +2,7 @@ import React from "react";
 import { useThemeStyles } from "../themes/useThemeStyles";
 
 const About: React.FC = () => {
-  const styles = useThemeStyles();
+  const styles = useThemeStyles() ?? {};
 
   return (
     <div className={styles.container}>

@@ -2,10 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { useThemeStyles } from "../themes/useThemeStyles";
-import { FiMenu, FiX } from "react-icons/fi";
+import { FiMenu } from "react-icons/fi";
 
 const Header: React.FC = () => {
-  const styles = useThemeStyles();
+  const styles = useThemeStyles() ?? {};
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen((prev) => !prev);

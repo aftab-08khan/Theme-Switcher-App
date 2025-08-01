@@ -9,7 +9,8 @@ const ThemeSwitcher: React.FC = () => {
     setTheme(e.target.value as ThemeType);
   };
 
-  const styles = useThemeStyles();
+  const styles = useThemeStyles() ?? {};
+
   return (
     <select
       value={theme}

@@ -11,7 +11,7 @@ interface Product {
 
 const Home: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
-  const styles = useThemeStyles();
+  const styles = useThemeStyles() ?? {};
 
   useEffect(() => {
     const fetchProducts = async () => {

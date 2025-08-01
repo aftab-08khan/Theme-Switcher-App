@@ -1,5 +1,6 @@
-import React, { useState, ChangeEvent, FormEvent } from "react";
+import React, { useState } from "react";
 import { useThemeStyles } from "../themes/useThemeStyles";
+import type { ChangeEvent, FormEvent } from "react";
 
 interface FormData {
   name: string;
@@ -8,7 +9,8 @@ interface FormData {
 }
 
 const Contact: React.FC = () => {
-  const styles = useThemeStyles();
+  const styles = useThemeStyles() ?? {};
+
   const [loading, setLoading] = useState<boolean>(false);
   const [formData, setFormData] = useState<FormData>({
     name: "",
