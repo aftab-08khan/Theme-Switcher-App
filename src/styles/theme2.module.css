@@ -1,0 +1,185 @@
+.container {
+  margin-top: 20px;
+  background-color: #121212;
+  color: #eeeeee;
+  font-family: "Georgia", serif;
+  min-height: calc(100vh - 78px);
+
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #bb86fc;
+}
+
+.button {
+  background-color: #bb86fc;
+  color: #000;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card {
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  padding: 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  background-color: #292929;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: #464646;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #bb86fc;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  color: #bb86fc;
+}
+
+.navLink:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+.main {
+  padding: 12px 32px;
+  padding-top: 46px;
+  background-color: #121212;
+}
+.selectField {
+  color: #bb86fc;
+  background-color: #121212;
+}
+.paragraph {
+  text-align: center;
+}
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #bb86fc;
+}
+
+.input,
+.textarea {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #bb86fc;
+  background-color: #444;
+  color: #eeeeee;
+  font-size: 1rem;
+}
+
+.submitButton {
+  background-color: #bb86fc;
+  color: #121212;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submitButton:hover {
+  background-color: #b176f9;
+}
+.menuButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  color: inherit;
+}
+
+.desktopNav {
+  display: flex;
+  gap: 1rem;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .desktopNav {
+    display: none;
+  }
+
+  .menuButton {
+    display: block;
+  }
+
+  .mobileNav {
+    background-color: inherit;
+    animation: slideDown 0.3s ease;
+    width: 100%;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
